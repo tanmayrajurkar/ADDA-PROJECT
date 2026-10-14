@@ -1,0 +1,22 @@
+server:
+  port: 8080
+  error:
+    include-message: never
+    include-stacktrace: never
+
+spring:
+  application:
+    name: adda-marketbot
+
+bot:
+  top-k: 4
+  min-score: 0.12
+  max-history: 10
+  llm:
+    api-key: ${GEMINI_API_KEY:}
+    model: ${GEMINI_MODEL:gemini-2.5-flash}
+    timeout-seconds: 20
+
+logging:
+  level:
+    com.adda.marketbot: INFO

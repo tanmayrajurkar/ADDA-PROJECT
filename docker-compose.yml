@@ -1,0 +1,10 @@
+services:
+  marketbot:
+    build: .
+    image: adda-marketbot:local
+    ports:
+      - "8080:8080"
+    environment:
+      GEMINI_API_KEY: ${GEMINI_API_KEY:-}
+      GEMINI_MODEL: ${GEMINI_MODEL:-gemini-2.5-flash}
+    restart: unless-stopped

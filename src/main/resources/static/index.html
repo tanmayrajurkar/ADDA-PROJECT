@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ADDA India Market Desk</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%23141a16'/%3E%3Cpath d='M6 22 V10 M6 16 H14 M18 22 V10 H26 M18 16 H24' stroke='%23e2b657' stroke-width='2' fill='none'/%3E%3C/svg%3E">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app">
+        <aside class="rail">
+            <div class="brand">
+                <p class="eyebrow">ADDA</p>
+                <h1>India Market Desk</h1>
+                <p class="lede">Answers are written only from the packaged Indian stock market knowledge base. Nothing is fetched live.</p>
+            </div>
+            <p class="rail-label" id="passage-count">Knowledge base</p>
+            <div class="topics" id="topics" aria-label="Knowledge topics"></div>
+        </aside>
+
+        <main class="desk">
+            <header class="desk-bar">
+                <div>
+                    <p class="eyebrow">Context locked</p>
+                    <h2>Ask about the Indian market</h2>
+                </div>
+                <button type="button" class="ghost" id="clear">New conversation</button>
+            </header>
+
+            <div class="thread" id="thread" aria-live="polite">
+                <article class="bubble assistant">
+                    <p>Ask a question about NSE, BSE, indices, settlement, orders, demat, corporate actions, or derivatives. If the knowledge base does not cover it, the desk will say so.</p>
+                </article>
+            </div>
+
+            <div class="prompts" id="prompts">
+                <button type="button" data-ask="What is the Nifty 50?">Nifty 50</button>
+                <button type="button" data-ask="What are NSE equity market hours?">Market hours</button>
+                <button type="button" data-ask="How does T+1 settlement work?">T+1 settlement</button>
+                <button type="button" data-ask="What is a demat account?">Demat account</button>
+                <button type="button" data-ask="What is the difference between a bonus issue and a split?">Bonus vs split</button>
+                <button type="button" data-ask="Should I buy this stock?">Buy advice</button>
+            </div>
+
+            <form class="composer" id="composer">
+                <label class="sr" for="message">Your question</label>
+                <textarea id="message" rows="1" maxlength="1000" placeholder="Ask from the knowledge base…" required></textarea>
+                <button type="submit" id="send">Send</button>
+            </form>
+            <p class="fine">Educational context only. This is not a broker, not SEBI, and not a recommendation to buy or sell.</p>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
